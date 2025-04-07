@@ -1,10 +1,27 @@
-import React from 'react';
-import Logo from '../../download.png';
-function Header(){
-    return (
-        <header>
-            <img src={Logo} alt="" />
-        </header>
-    )
+import React from "react";
+import Logo from "../../download.png";
+function Header({username,age}) {
+ 
+  return (
+    <header className="flex justify-between items-center shadow-md px-10 py-2">
+      <div>
+        <img className="w-[30%]" src={Logo} alt="" />
+      </div>
+      <div>
+        <ul className="flex gap-7 text-[1.2rem]">
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+      </div>
+      <div>
+        <h1 className="text-[1.2rem] font-bold">Username: {username}</h1>
+      </div>
+      <div>
+        <button className="text-[1.2rem] bg-sky-800 text-white outline-none px-5 py-2">Login</button>
+      </div>
+    </header>
+  );
 }
+
 export default Header;
