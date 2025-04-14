@@ -1,5 +1,7 @@
+import Form from "./components/Form.jsx";
 import Header from "./components/Header.jsx";
 import ListData from "./components/ListData.jsx";
+import Memo from "./components/Memo.jsx";
 import StateHook from "./components/State.jsx";
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
       <Header username="Sakshi" />
       {/* <ListData arrayData={data}/> */}
       <StateHook/>
+      <Form/>
     </>
   );
 }
