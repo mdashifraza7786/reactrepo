@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../download.png";
+import { Link } from "react-router-dom";
 
 function Header(props) {
 
@@ -11,9 +12,9 @@ function Header(props) {
       </div>
       <div>
         <ul className="flex gap-7 text-[1.2rem]">
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/data"><li>Data</li></Link>
+            <Link to="/form"> <li>Form</li></Link>
         </ul>
       </div>
       <div>
@@ -25,5 +26,4 @@ function Header(props) {
     </header>
   );
 }
-
 export default Header;

@@ -1,9 +1,11 @@
 import Form from "./components/Form.jsx";
 import Header from "./components/Header.jsx";
+import Home from "./components/Home.jsx";
 import ListData from "./components/ListData.jsx";
 import Memo from "./components/Memo.jsx";
+import Parent from "./components/Parent.jsx";
 import StateHook from "./components/State.jsx";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const data = [
     { name: "Sakshi", age: 16, city: "Delhi" },
@@ -19,10 +21,15 @@ function App() {
 
   return (
     <>
-      <Header username="Sakshi" />
-      {/* <ListData arrayData={data}/> */}
-      <StateHook/>
-      <Form/>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" index element={<Home/>} />
+          <Route path="/data" element={<ListData arrayData={data} />} />
+          <Route path="/state" element={<StateHook/>} />
+          <Route path="/form" element={<Form/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
