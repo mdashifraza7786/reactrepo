@@ -1,9 +1,8 @@
+import Calander from "./components/Calander.jsx";
 import Form from "./components/Form.jsx";
 import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx";
 import ListData from "./components/ListData.jsx";
-import Memo from "./components/Memo.jsx";
-import Parent from "./components/Parent.jsx";
 import StateHook from "./components/State.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
@@ -28,9 +27,11 @@ function App() {
           <Route path="/data" element={<ListData arrayData={data} />} />
           <Route path="/state" element={<StateHook/>} />
           <Route path="/form" element={<Form/>} />
+          <Route path="/calander" element={<Calander/>} />
         </Routes>
       </BrowserRouter>
     </>
   );
 }
 export default App;
+
