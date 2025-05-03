@@ -39,11 +39,6 @@ const  Calander = () => {
     const currentMonth = new Date().getMonth();
     const today = new Date().getDate();
 
-    // const date = new Date();
-    // const monthinstring = date.toLocaleString('default');
-    // console.log(monthinstring)
-
-
 
 
     return (
@@ -64,7 +59,8 @@ const  Calander = () => {
             <div className="grid grid-cols-7 gap-2 text-center mt-2">
                 {calanderDays.map((date, index) => {
                     return (
-                        <div key={index} className={`flex items-center justify-center h-10 w-10 rounded-full ${date != '' ? "border" : ""} ${month == currentMonth && date == today  ? "bg-blue-400" : ""}`}>
+                        <div key={index} 
+                        className={`flex items-center justify-center h-10 w-10 rounded-full ${date != '' ? "border" : ""} ${month == currentMonth && date == today  ? "bg-blue-400" : ""}`}>
                             {date}
                         </div>
                     )
